@@ -19,7 +19,12 @@ public class AnnotationDemoApp {
 		System.out.println(theCoach.getDailyFortune());
 		
 		// close the context
+		// context.close();
+		
+		SwimCoach swimCoach = context.getBean("swimCoach",SwimCoach.class);
+		//System.out.println(swimCoach.getEmail());
 		context.close();
+	
 	}
 
 }
